@@ -4,6 +4,7 @@ Feature: Search hotel
     Given booking search page is opened
     When user performs search by "Akra Kemer"
     Then "Akra Kemer - Ultra All Inclusive " hotel is shown
+#    And hotel has rating "9,2"
 
   Scenario Outline: Looking for 'Meraki'
     Given booking search page is opened
