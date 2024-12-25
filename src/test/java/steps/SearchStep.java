@@ -14,7 +14,6 @@ import pages.SearchPage;
 import java.time.Duration;
 
 public class SearchStep {
-
     WebDriver driver;
     SearchPage searchPage;
 
@@ -24,7 +23,7 @@ public class SearchStep {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         searchPage = new SearchPage(driver);
-           }
+    }
 
     @Given("booking search page is opened")
     public void bookingSearchPageIsOpened() {
@@ -43,7 +42,7 @@ public class SearchStep {
     }
 
     @And("hotel has rating {string}")
-    public void hotelHasRating(String hotelRating) {
+    public void hotelHasRating(String hotelRating) throws InterruptedException {
         boolean result = searchPage.isRatingCorrect(hotelRating);
         Assert.assertTrue(result, "The rating is incorrect");
     }
