@@ -3,8 +3,8 @@ Feature: Search hotel
   Scenario: Looking for 'Akra Kemer'
     Given booking search page is opened
     When user performs search by "Akra Kemer"
-    Then "Akra Kemer - Ultra All Inclusive " hotel is shown
-#    And hotel has rating "9,2"
+    Then "Akra Kemer - Ultra All Inclusive" hotel is shown
+    And hotel has rating "Оценка 9,1"
 
   Scenario Outline: Looking for 'Meraki'
     Given booking search page is opened
